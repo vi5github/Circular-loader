@@ -1,0 +1,44 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap{
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    animation: wrap-show 1.5s infinite;
+}
+
+@keyframes wrap-show{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+svg{
+    width: 200px;
+    height: 200px;
+}
+
+.circular{
+    animation: circular-show 1.5s infinite;
+}
+
+@keyframes circular-show{
+    0%{
+       stroke-dasharray: 10, 510;
+       stroke-dashoffset: 0;
+    }
+    50%{
+       stroke-dasharray: 170, 510;
+       stroke-dashoffset: -250;
+    }
+    100%{
+       stroke-dasharray: 170, 510;
+       stroke-dashoffset: -510;
+    }
+}
